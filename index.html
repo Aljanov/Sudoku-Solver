@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="language-selector">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="tr">TR</button>
+    </div>
+    <div class="container">
+        <h1 class="translate" data-tr="title">Sudoku Solver</h1>
+        <div id="sudoku-board">
+            <table>
+                <tbody>
+                    <!-- Row 1 -->
+                    <tr>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                    </tr>
+                    <!-- Row 2 -->
+                    <tr>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                    </tr>
+                    <!-- Row 3 -->
+                    <tr>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                    </tr>
+                    <!-- Row 4 -->
+                    <tr>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                    </tr>
+                    <!-- Row 5 -->
+                    <tr>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                    </tr>
+                    <!-- Row 6 -->
+                    <tr>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                    </tr>
+                    <!-- Row 7 -->
+                    <tr>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                    </tr>
+                    <!-- Row 8 -->
+                    <tr>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                    </tr>
+                    <!-- Row 9 -->
+                    <tr>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                        <td><input type="number" min="1" max="9"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="buttons">
+            <button id="validate-btn" class="btn translate" data-tr="validate">Validate Puzzle</button>
+            <button id="solve-btn" class="btn primary translate" data-tr="solve">Solve Puzzle</button>
+            <button id="clear-btn" class="btn secondary translate" data-tr="clear">Clear Board</button>
+        </div>
+        <div id="message" class="message"></div>
+        
+        <!-- New footer section -->
+        <footer class="footer">
+            <p><span class="translate" data-tr="created">Created by</span>: Aljanov
+                <br>
+                <a href="https://github.com/Aljanov" target="_blank">GitHub</a> | 
+                <a href="https://www.linkedin.com/in/farid-aljanov-609b8a269/" target="_blank">LinkedIn</a>
+            </p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

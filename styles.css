@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#sudoku-board {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+table {
+    border-collapse: collapse;
+    border: 3px solid #333;
+}
+
+td {
+    padding: 0;
+    border: 1px solid #bbb;
+}
+
+/* Create thicker borders for 3x3 subgrids */
+tr:nth-child(3n) td {
+    border-bottom: 3px solid #333;
+}
+
+td:nth-child(3n) {
+    border-right: 3px solid #333;
+}
+
+input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
+input:focus {
+    background-color: #f0f0f0;
+}
+
+/* Remove arrows from number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #45a049;
+}
+
+.btn.secondary {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn.secondary:hover {
+    background-color: #da190b;
+}
+
+.btn:not(.primary):not(.secondary) {
+    background-color: #008CBA;
+    color: white;
+}
+
+.btn:not(.primary):not(.secondary):hover {
+    background-color: #007399;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.footer a {
+    color: #0366d6;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    color: #586069;
+    font-size: 14px;
+}
+
+/* Add these new styles */
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    color: #333;
+}
+
+.lang-btn:hover {
+    color: #0366d6;
+}
+
+.lang-btn.active {
+    font-weight: bold;
+    color: #0366d6;
+}
+
+.language-selector span {
+    color: #ccc;
+    margin: 0 5px;
+} 
